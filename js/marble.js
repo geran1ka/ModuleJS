@@ -38,25 +38,19 @@
       }
     },
     set resetScope(value) {
-      this._scopeBot = 5;
-      this._scopePlayer = 5;
+      this._scopeBot = value;
+      this._scopePlayer = value;
     },
   };
-  //
-
   // функция для хода компьютера
   const getRandomIntInclusive = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
-
-  // переменная определяет чей ход: четное число - загадывает игрок
-  // нечетное число - загадывает бот
   // Определение первого хода в игре камень ножницы бумага
   const game = () => {
     // Определение кто перым загадывает чиcло
-
     const getWhoGoesFirst = () => {
       const gameFigures = ['камень', 'ножницы', 'бумага'];
       // функция запроса ввода данных от игрока
