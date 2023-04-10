@@ -148,7 +148,8 @@
         // Игрок загадывает количество шариков.
         const user = userResponse(result.scopePlayer);
         // Бот отгадывает четное или не четное количество шариков;
-        const computer = getRandomIntInclusive(0, 1);
+        const computer = result.scopePlayer <= 1 ?
+          1 : getRandomIntInclusive(0, 1);
         // Определение победителя
         switch (true) {
           case (user === false):
