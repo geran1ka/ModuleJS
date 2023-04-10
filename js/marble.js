@@ -82,7 +82,6 @@
           Игрок: ${gameFigures[user]}
         `);
       };
-
       // Определение победителя.
       switch (true) {
         case (!user && user !== 0): // Проверка на завершение игры
@@ -104,7 +103,6 @@
     // Игра Mарблы 10 шариков
     return function marbleStart() {
       // вывод стартовой информации
-
       if (goesFirst === 0) {
         alert(`
           МАРБЛЫ: 10 стеклянных шариков.
@@ -126,7 +124,6 @@
         }
         goesFirst = getWhoGoesFirst();
       }
-
       // функция вывода количества шариков
       const alertWinner = (str) => alert(`
         ${str}
@@ -174,10 +171,9 @@
       } else {
         // Бот загадывает количество шариков.
         const computerOne = getRandomIntInclusive(1, result.scopeBot);
-        console.log('computer: ', computerOne);
+
         // Игрок отгадывает четное или не четное количество шариков;
         const user = confirm(`Число четное?: `) ? 0 : 1;
-        console.log('userOdd: ', user);
 
         switch (true) {
           case (computerOne % 2 === user):
